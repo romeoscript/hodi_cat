@@ -1,34 +1,61 @@
 import React from "react";
 import hodicatBg from "./assets/hodicat-bg.jpg";
 
+const X_LINK = "https://x.com/Hodi_cat";
 
-const X_LINK = "https://x.com/Hodi_cat"; // Replace with your actual X link
+// ---
+// IMPORTANT: Add the following to your tailwind.config.js under theme.extend:
+//
+// keyframes: {
+//   'zoom-rotate': {
+//     '0%, 100%': { transform: 'scale(1) rotate(0deg)' },
+//     '50%': { transform: 'scale(1.08) rotate(2deg)' },
+//   },
+//   'fade-in': {
+//     '0%': { opacity: 0, transform: 'translateY(40px)' },
+//     '100%': { opacity: 1, transform: 'translateY(0)' },
+//   },
+//   'wiggle': {
+//     '0%, 100%': { transform: 'rotate(-3deg)' },
+//     '50%': { transform: 'rotate(3deg)' },
+//   },
+//   'pulse-slow': {
+//     '0%, 100%': { opacity: 1 },
+//     '50%': { opacity: 0.7 },
+//   },
+// },
+// animation: {
+//   'zoom-rotate': 'zoom-rotate 16s ease-in-out infinite',
+//   'fade-in': 'fade-in 1s ease-out',
+//   'wiggle': 'wiggle 1.5s ease-in-out infinite',
+//   'pulse-slow': 'pulse-slow 2s ease-in-out infinite',
+// },
+// ---
 
 export default function ComingSoon() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background image */}
       <img
-        src={hodicatBg} // Place your image in the public folder with this name
+        src={hodicatBg}
         alt="Hodicat background"
-        className="absolute inset-0 w-full h-full object-cover z-0 scale-100 animate-zoom"
+        className="absolute inset-0 w-full h-full object-cover z-0 scale-100 animate-zoom-rotate"
       />
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-black opacity-50 z-10 transition-opacity duration-1000" />
+      {/* Animated Overlay */}
+      <div className="absolute inset-0 bg-black opacity-40 z-10 animate-pulse-slow transition-opacity duration-1000" />
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-white px-4 py-12">
-       
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-center animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-center animate-wiggle">
           Hodicat is Coming Soon!
         </h1>
-        <p className="text-lg md:text-2xl mb-8 text-yellow-300 text-center max-w-xl animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
+        <p className="text-lg md:text-2xl mb-8 text-yellow-300 text-center max-w-xl animate-fade-in">
           The gangsta cat is almost here. Stay tuned!
         </p>
         <a
           href={X_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center bg-black hover:bg-zinc-800 transition px-6 py-3 rounded-full font-bold text-lg shadow-lg animate-bounce"
+          className="inline-flex items-center bg-black hover:bg-zinc-800 transition px-6 py-3 rounded-full font-bold text-lg shadow-lg animate-bounce animate-pulse-slow"
         >
           <svg
             className="w-6 h-6 mr-2"
