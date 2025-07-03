@@ -2,7 +2,7 @@ import React from "react";
 import hodicatBg from "./assets/hodicat-bg.jpg";
 
 
-const X_LINK = "https://x.com/your-hodicat-handle"; // Replace with your actual X link
+const X_LINK = "https://x.com/Hodi_cat"; // Replace with your actual X link
 
 export default function ComingSoon() {
   return (
