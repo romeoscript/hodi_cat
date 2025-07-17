@@ -1,7 +1,8 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap');
 
 body {
-  @apply font-meme bg-black text-white;
+  /* @apply font-meme bg-black text-white; */
   overscroll-behavior-y: contain;
 }
 
@@ -9,6 +10,3 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply font-meme;
-}
