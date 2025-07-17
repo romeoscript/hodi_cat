@@ -55,7 +55,11 @@ export default function StorySection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: -60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.3 }}
       className="py-20 px-4 relative z-20 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #FFB347 0%, #FF8008 100%)" }}
     >
@@ -89,10 +93,10 @@ export default function StorySection() {
       <div className="max-w-5xl mx-auto relative z-30">
         <motion.h2
           className="text-4xl md:text-6xl font-black text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-white"
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           ⚡ THE BONK CHRONICLES ⚡
         </motion.h2>
@@ -101,10 +105,10 @@ export default function StorySection() {
             <motion.div
               key={idx}
               className="bg-black/80 rounded-2xl p-8 flex flex-col items-center shadow-2xl border border-yellow-400/30 hover:border-yellow-400 transition-all duration-200 hover:scale-105"
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: -60 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 * idx, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               style={{
                 transform: `translateY(${parallaxY * 0.15}px)`,
                 transition: "transform 0.3s cubic-bezier(.4,2,.6,1)",
@@ -121,6 +125,6 @@ export default function StorySection() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 } 
