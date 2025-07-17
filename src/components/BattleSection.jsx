@@ -1,8 +1,19 @@
-import React from "react";
-import BONK from "../assets/bonk3.png";
+import React, { useState, useEffect } from "react";
+import BONK1 from "../assets/bonk1.png";
+import BONK2 from "../assets/bonk2.png";
+import BONK3 from "../assets/bonk3.png";
 import HODIBG from "../assets/hodicat.jpg";
 
+const bonkImages = [BONK1, BONK2, BONK3];
+
 export default function BattleSection() {
+  const [imgIdx, setImgIdx] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImgIdx((prev) => (prev + 1) % bonkImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="py-20 px-4 relative z-20 overflow-hidden ">
       {/* Parallax/faded background image */}
@@ -35,7 +46,7 @@ export default function BattleSection() {
             <div className="relative flex items-center justify-center">
               <div className="w-72 sm:w-80 aspect-square rounded-3xl bg-gradient-to-br from-yellow-400 via-orange-400 to-red-500 p-1">
                 <img 
-                  src={BONK} 
+                  src={bonkImages[imgIdx]} 
                   alt="Commander Bonk" 
                   loading="lazy"
                   className="w-full h-full object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 mx-auto border-4 border-black/60"
