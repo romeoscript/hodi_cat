@@ -19,7 +19,7 @@ export default function BattleSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           🔥 THE FINAL BATTLE
         </h2>
@@ -30,15 +30,18 @@ export default function BattleSection() {
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
-            <div className="relative">
-              <img 
-                src={BONK} 
-                alt="Commander Bonk" 
-                className="w-80 h-80 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 mx-auto"
-              />
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-400 to-orange-400 text-black px-4 py-2 rounded-full font-black shadow-xl animate-pulse">
+            <div className="relative flex items-center justify-center">
+              <div className="w-72 sm:w-80 aspect-square rounded-3xl bg-gradient-to-br from-yellow-400 via-orange-400 to-red-500 p-1">
+                <img 
+                  src={BONK} 
+                  alt="Commander Bonk" 
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 mx-auto border-4 border-black/60"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-400 to-orange-400 text-black px-4 py-2 rounded-full font-black shadow-xl animate-pulse z-20">
                 COMMANDER ⚔️
               </div>
             </div>
@@ -48,7 +51,7 @@ export default function BattleSection() {
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/50">
               <p className="text-lg text-white leading-relaxed mb-4">

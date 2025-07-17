@@ -19,7 +19,7 @@ export default function CallOfBonkLanding() {
             <span className="font-bold text-white">CALL OF BONK</span>
           </div>
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-lg font-bold text-sm">
-            BUY $BONK
+            BUY $COB
           </div>
         </div>
       </nav>
@@ -30,7 +30,7 @@ export default function CallOfBonkLanding() {
       {/* <RoadmapSection /> */}
       <CallToActionSection />
       {/* Footer */}
-      <footer className="py-8 px-4 bg-black/40 backdrop-blur-sm relative z-20">
+      <footer className="py-8 px-4 bg-black/90 backdrop-blur-sm relative z-20">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-white/90 mb-2 font-semibold">
             © {new Date().getFullYear()} Call of Bonk. The resistance lives on.

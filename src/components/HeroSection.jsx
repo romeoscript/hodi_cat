@@ -86,7 +86,7 @@ export default function HeroSection() {
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-black px-12 py-4 rounded-xl text-xl transition-all duration-200 hover:scale-105 shadow-2xl inline-block"
           >
-            BUY $BONK
+            BUY $COB
           </a>
         </motion.div>
         <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4 z-50">
