@@ -54,7 +54,7 @@ export default function HeroSection() {
         <div className="flex items-center justify-center gap-4 mb-8">
           
           <motion.h1
-            className="text-5xl  flex items-center justify-center gap-2 md:text-7xl font-black bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent"
+            className="text-5xl flex items-center justify-center gap-2 md:text-7xl font-black bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent max-md:flex-col"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
