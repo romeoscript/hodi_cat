@@ -2,7 +2,8 @@ import React from "react";
 import hodicatBg from "./assets/hodicat.jpg";
 
 const X_LINK = "https://x.com/CallOfBonk";
-const DEX_LINK = "https://dexscreener.com/solana/DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
+const DEX_LINK =
+  "https://dexscreener.com/solana/DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
 
 // ---
 // IMPORTANT: Add the following to your tailwind.config.js under theme.extend:
@@ -50,7 +51,7 @@ export default function ComingSoon() {
           Call of Bonk is Coming Soon!
         </h1>
         <p className="text-lg md:text-2xl mb-8 text-yellow-300 text-center max-w-xl animate-fade-in">
-          The gangsta bonk is almost here. Stay tuned!
+          Don't trench alone. Join the Bonk army!!!!
         </p>
         <a
           href={X_LINK}
@@ -63,7 +64,7 @@ export default function ComingSoon() {
             fill="currentColor"
             viewBox="0 0 1200 1227"
           >
-            <path d="M1142 0H893L600 410 307 0H58l410 570L0 1227h249l351-495 351 495h249L790 657z"/>
+            <path d="M1142 0H893L600 410 307 0H58l410 570L0 1227h249l351-495 351 495h249L790 657z" />
           </svg>
           Follow us on X
         </a>
@@ -78,4 +79,4 @@ export default function ComingSoon() {
       </div>
     </div>
   );
-} 
+}
