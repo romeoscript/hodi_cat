@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import dex from "../assets/dexscreener.avif";
 import tel from "../assets/telegram.png";
 import x from "../assets/x.png";
+import BONK from "../assets/bonk-logo.png";
 import BG_VIDEO from "../assets/shibainu.mp4";
 
 const contractAddress = "DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
@@ -51,17 +52,15 @@ export default function HeroSection() {
       <VideoBackgroundParallax />
       <div className="relative z-30 text-center max-w-4xl mx-auto">
         <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-3xl">
-            🐶
-          </div>
+          
           <motion.h1
-            className="text-5xl md:text-7xl font-black bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent"
+            className="text-5xl  flex items-center justify-center gap-2 md:text-7xl font-black bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            CALL OF BONK
+            <img src={BONK} alt="BONK" className="w-15 h-15" />CALL OF BONK
           </motion.h1>
         </div>
         <motion.p

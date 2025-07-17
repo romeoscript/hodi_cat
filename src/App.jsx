@@ -6,6 +6,9 @@ import StatsSection from "./components/StatsSection";
 import RoadmapSection from "./components/RoadmapSection";
 import CallToActionSection from "./components/CallToActionSection";
 import FloatingElements from "./components/FloatingElements";
+import BONK from "./assets/bonk-logo.png";
+
+const DEX_LINK = "https://dexscreener.com/solana/DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
 
 export default function CallOfBonkLanding() {
   return (
@@ -15,12 +18,17 @@ export default function CallOfBonkLanding() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🐶</span>
+            <span className="text-2xl"><img src={BONK} alt="BONK" className="w-10 h-10" /></span>
             <span className="font-bold text-white">CALL OF BONK</span>
           </div>
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-lg font-bold text-sm">
+          <a
+            href={DEX_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-lg font-bold text-sm hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 hover:scale-105 cursor-pointer"
+          >
             BUY $COB
-          </div>
+          </a>
         </div>
       </nav>
       <HeroSection />

@@ -2,16 +2,17 @@ import React, { useState, useEffect } from "react";
 import BONK1 from "../assets/bonk1.png";
 import BONK2 from "../assets/bonk2.png";
 import BONK3 from "../assets/bonk3.png";
+import BONK4 from "../assets/command.jpg";
 import HODIBG from "../assets/hodicat.jpg";
 
-const bonkImages = [BONK1, BONK2, BONK3];
+const bonkImages = [BONK4,BONK1, BONK2, BONK3];
 
 export default function BattleSection() {
   const [imgIdx, setImgIdx] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setImgIdx((prev) => (prev + 1) % bonkImages.length);
-    }, 2000);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
   return (

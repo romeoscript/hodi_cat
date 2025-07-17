@@ -98,7 +98,7 @@ export default function StorySection() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: false }}
         >
-          ⚡ THE BONK CHRONICLES ⚡
+          ⚡ THE $COB CHRONICLES ⚡
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {storyCards.map((card, idx) => (

@@ -3,20 +3,19 @@ import React from "react";
 export default function FloatingElements() {
   return (
     <div className="fixed inset-0 pointer-events-none z-10">
-      {/* Cyberpunk floating elements */}
-      {[...Array(8)].map((_, i) => (
+      {/* Subtle meme floating elements */}
+      {[...Array(12)].map((_, i) => (
         <div
           key={i}
-          className="absolute animate-pulse opacity-20"
+          className="absolute opacity-10 animate-pulse"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 3}s`,
+            left: `${10 + Math.random() * 80}%`,
+            top: `${10 + Math.random() * 80}%`,
+            animationDelay: `${Math.random() * 4}s`,
+            animationDuration: `${2 + Math.random() * 2}s`,
           }}
         >
-          <div className="text-3xl">
-            {["🚀", "💎", "🔥", "⚡", "🌙", "🎮", "💻", "🛡️"][i]}
-          </div>
+          
         </div>
       ))}
     </div>
