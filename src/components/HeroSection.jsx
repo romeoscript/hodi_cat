@@ -9,7 +9,7 @@ import BG_VIDEO from "../assets/shibainu.mp4";
 const contractAddress = "DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
 const X_LINK = "https://x.com/CallOfBonk";
 const DEX_LINK = "https://dexscreener.com/solana/DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
-const TELEGRAM_LINK = "https://t.me/CallOfBonk";
+const TELEGRAM_LINK = "https://t.me/COBCTO";
 
 function VideoBackgroundParallax() {
   const [parallaxY, setParallaxY] = useState(0);

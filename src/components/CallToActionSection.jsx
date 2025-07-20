@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const X_LINK = "https://x.com/CallOfBonk";
 const DEX_LINK = "https://dexscreener.com/solana/DyQhAmM9drDbbs1CaHpdCRFt6MxhESV8ThS71xuqbonk";
-const TELEGRAM_LINK = "https://t.me/CallOfBonk";
+const TELEGRAM_LINK = "https://t.me/COBCTO";
 
 export default function CallToActionSection() {
   const socials = [
